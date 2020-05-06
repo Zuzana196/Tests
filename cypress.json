@@ -1,6 +1,6 @@
 {
     "env": {
-      "viewport": "macbook-13",
-      "testUrl": "https://km-cms-testing.herokuapp.com/app#"
+      "testViewport": "macbook-13",
+      "testUrl": "https://www.slevomat.cz/"
     }
   }
