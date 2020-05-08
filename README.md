@@ -1,6 +1,10 @@
-# Tests
-How to run tests:
-1. install cypress - npm i cypress
-2. start tests - npm run cypress:open
-3. after the tests start, the cypress application is switched on
-4. in the cypress, application click on the folder of test
+# About
+This is Zuzana Janošikova showcase applications.
+In this application I am testing [slevomat](https://www.slevomat.cz/brno) with Cypress
+
+# Prerequisites
+[Node](https://nodejs.org/en/download/)
+
+# How tu run
+1. install packages: `npm i`
+2. start tests: `npm run cypress:open`

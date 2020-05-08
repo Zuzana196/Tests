@@ -1,51 +1,52 @@
 import { elements } from "../support/constants";
 import { variablesCZ } from "../support/variables";
 import { getInformerSearching } from "../support/request";
-import "../support/commands"
+import "../support/commands";
 
-describe("basic functionality in the home page Slevomat", () => {
+describe("Basic functionality on the home page of Slevomat", () => {
   beforeEach(() => {
-  cy.initTest()
+    cy.initTest();
   });
 
-  it("searching home page", () => {
+  it("Returns proper items when searching", () => {
     cy.server();
     cy.route(getInformerSearching);
     cy.get(elements.inputSearchingHP)
       .clear()
       .focus()
-      .type("Wellness {enter}")
+      .type(variablesCZ.searchingText)
+      .type("{enter}")
       .end();
     cy.get(elements.containerSearchingHP)
       .find("h1")
       .should(($h1) => {
-        expect($h1).to.have.text("\nWellness pobyty a dovolená\n");
+        expect($h1).to.have.text(variablesCZ.SearchingTitleText);
       });
     cy.location().should((loc) => {
-      expect(loc.href).to.include("/wellness");
+      expect(loc.href).to.include(variablesCZ.searchingText);
     });
     cy.get(elements.buttonSearchingAllWeb)
-      .contains(variablesCZ.buttonSearchingAllWeb)
+      .contains(variablesCZ.buttonSearchingAllWebText)
       .click()
       .end();
     cy.get(elements.pageSearch)
       .find(elements.titleProduct)
       .first()
       .should(($titleProduct) => {
-        expect($titleProduct).to.contain("Wellness");
+        expect($titleProduct).to.contain(variablesCZ.searchingText);
       });
   });
-  
-  it("searching - term of travel", () => {
+
+  it("Returns proper items when searching on page travel", () => {
     cy.get(elements.buttonTraveling).click();
-    cy.get(".button").contains(variablesCZ.buttonSearching).click();
+    cy.get(".button").contains(variablesCZ.buttonSearchingText).click();
     cy.location().should((loc) => {
-      expect(loc.href).to.include("#nabidky");
+      expect(loc.href).to.include(variablesCZ.urlOffersText);
     });
     cy.get(elements.wrapperAssertTerm)
       .find("strong")
       .should(($strong) => {
-        expect($strong).to.contain(variablesCZ.daysSearching);
+        expect($strong).to.contain(variablesCZ.daysSearchingText);
       });
   });
 });

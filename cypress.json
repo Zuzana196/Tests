@@ -1,6 +1,6 @@
 {
-    "env": {
-      "testViewport": "macbook-13",
-      "testUrl": "https://www.slevomat.cz/"
-    }
+  "env": {
+    "testViewport": "macbook-13",
+    "testUrl": "https://www.slevomat.cz/"
   }
+}

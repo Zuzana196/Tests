@@ -1,24 +1,21 @@
 {
-  "name": "tests",
+  "name": "zuzana-janosikova-showcase",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This is Zuzana Janosikova showcase applications.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Zuzana196/Tests.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Zuzana Janosikova <janosikova96@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Zuzana196/Tests/issues"
   },
   "homepage": "https://github.com/Zuzana196/Tests#readme",
   "dependencies": {
-    "cypress": "^4.5.0"
-    
+    "cypress": "4.5.0"
   }
 }

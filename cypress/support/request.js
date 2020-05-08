@@ -1,3 +1,6 @@
+/**
+ * Seznam mockovaných requestů
+ */
 export const getInformerSearching = {
     method: 'GET',
     url: '**/hledani/naseptavac?keyword=wellness',

@@ -1,12 +1,12 @@
 import { elements } from "../support/constants";
-import "../support/commands"
+import "../support/commands";
 
-describe("basic functionality in the home page Slevomat", () => {
+describe("Basic functionality on the home page of Slevomat", () => {
   beforeEach(() => {
-   cy.initTest()
+    cy.initTest();
   });
 
-  it("Benefits cards", () => {
+  it("Contains 9 benefit cards", () => {
     cy.get(elements.buttonBenefits).eq(1).click().end();
     cy.get(elements.gatesBenefit)
       .find(elements.cardsBenefits)

@@ -1,9 +1,12 @@
-export const variables = {
-  assertSearching: "Wellness pobyty a dovolená"
-};
+/**
+ * Seznam proměnných v českém jazyce
+ */
 
 export const variablesCZ = {
-  buttonSearchingAllWeb:'hledat',
-  buttonSearching: 'Vyhledat',
-  daysSearching: "1–17 dní"
-}
+  searchingTitleText: "\nWellness pobyty a dovolená\n",
+  buttonSearchingAllWebText: "hledat",
+  buttonSearchingText: "Vyhledat",
+  daysSearchingText: "1–17 dní",
+  searchingText: "Wellness",
+  urlOffersText: "#nabidky",
+};
